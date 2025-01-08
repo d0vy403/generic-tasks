@@ -2,16 +2,17 @@ package Generic;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] numbers = {1,2,3};
-        String[] word = {"Hello", "World"};
+        Azuolas azuolas = new Azuolas();
+        Berzas berzas = new Berzas();
+        Egle egle = new Egle();
+        Pusis pusis = new Pusis();
+        Kadagys kadagys = new Kadagys();
 
-        printArray(numbers);
-        printArray(word);
-
-    }
-    public static <T> void printArray(T[] array) {
-        for (T element : array) {
-            System.out.println(element);
-        }
+        azuolas.turi();
+        berzas.turi();
+        egle.turi();
+        pusis.turi();
+        kadagys.turi();
     }
 }
+
