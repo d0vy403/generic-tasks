@@ -11,7 +11,7 @@ public class Main {
         list2.addNumber(50.7);
         list2.addNumber(6.7);
 
-        ListOfNumbers result = MaxAverage.findMaxAverage(list1, list2);
+        ListOfNumbers result = ListOfNumbers.findMaxAverage(list1, list2);
         System.out.println("List with max average: " + result);
 
     }

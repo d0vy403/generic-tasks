@@ -11,15 +11,29 @@ public class ListOfNumbers {
     }
 
     public double getAverage() {
-
-        if (doubleList.isEmpty()) {
-            return 0;
-        }
         double sum = 0;
+        if (doubleList.isEmpty()) {
+            return sum;
+        }
+
         for (double num : doubleList) {
             sum += num;
         }
         return sum / doubleList.size();
+    }
+
+    public static ListOfNumbers findMaxAverage(ListOfNumbers... lists) {
+        double maxAverage = Double.NEGATIVE_INFINITY;
+        ListOfNumbers maxList = null;
+
+        for (ListOfNumbers list : lists) {
+            double currentAverage = list.getAverage();
+            if (currentAverage > maxAverage) {
+                maxAverage = currentAverage;
+                maxList = list;
+            }
+        }
+        return maxList;
     }
 
     @Override
